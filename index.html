@@ -69,14 +69,15 @@
 
       <!-- tweetbox starts -->
       <div class="tweetBox">
-        <form>
+        <form id="addTweet">
           <div class="tweetbox__input">
             <div class="tweetbox__input__profileimage">
             <img src="/images/profile.jpg" alt="Profile Picture of Logged in User">
           </div>
-            <input type="text" placeholder="What's happening?">
-          </div>
-          <button class="tweetBox__tweetButton">Tweet</button>
+            <input type="username" id="userName" placeholder="Your username.">
+            <input type="text" id="userMessage" placeholder="Your tweet here...">
+        </div>
+          <button type="submit" class="tweetBox__tweetButton">Tweet</button>
         </form>
       </div>
       <!-- tweetbox ends -->
@@ -105,6 +106,7 @@
             <span class="material-icons"> favorite_border </span>
           </div>
         </div>
+        <div id="dynamicTweet"></div>
       </div>
       <!-- post ends -->
     </div>
