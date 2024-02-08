@@ -16,10 +16,13 @@ const addTweet = async (e) => {
 };
 
 const saveTweet = async (tweet) => {
-  const url = 'http://localhost:3000/xxx';
+  const url = 'http://192.168.171.180:3001/messages/add';
   const http = new HttpClient(url);
   await http.add(tweet);
   location.href = './index.html';
+  console.log(saveTweet)
 };
+
+
 
 form.addEventListener('submit', addTweet);

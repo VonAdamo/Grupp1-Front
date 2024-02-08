@@ -24,13 +24,12 @@ export default class HttpClient {
 
     async add(data) {
         try {
-            console.log(data);
             const response = await fetch(this.#url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(data),                
             })
 
             if (response.ok) {
@@ -41,29 +40,7 @@ export default class HttpClient {
             }
 
         } catch (error) {
-            throw new Error(`Couldn't save user ${error}`)
+            throw new Error(`Couldn't save ${error}`)
         }
     }
 }
-
-const addNewUser = async(users) => {
-    const url = "http://localhost:3000/users"
-
-    try {
-    const response = await fetch(url,{
-        method: "POST",
-        headers: {
-            'Content-Type': "application/json" 
-        },
-        body: JSON.stringify(users),
-    });
-    if (response.ok) {
-        const newUser = await response.json();
-        return newUser;
-    }else{
-        console.log("Failed")
-    }
-    } catch (error) {
-    console.log(error)
-    }
-};

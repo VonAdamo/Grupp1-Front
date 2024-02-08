@@ -11,7 +11,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous">
-    <script src="script.js"></script>
+    <script src="add-tweet.js" type="module" defer></script>
+    <script src="gallery.js" type="module" defer></script>
   </head>
   <body>
 
@@ -72,7 +73,7 @@
         <form id="addTweet">
           <div class="tweetbox__input">
             <div class="tweetbox__input__profileimage">
-            <img src="/images/profile.jpg" alt="Profile Picture of Logged in User">
+            <img src="/images/elon.jpg" alt="Profile Picture of Logged in User">
           </div>
             <input type="username" id="userName" placeholder="Your username.">
             <input type="text" id="userMessage" placeholder="Your tweet here...">
@@ -83,31 +84,7 @@
       <!-- tweetbox ends -->
 
       <!-- post starts -->
-      <div class="post">
-        <div class="post__avatar">
-          <img src="/images/elon.jpg" alt="Profile Picture">
-        </div>
-
-        <div class="post__body">
-          <div class="post__header">
-            <div class="post__headerText">
-              <h3>Elon Musk<span class="post__headerSpecial"><span class="material-icons post__badge"> verified </span>@elonmusk</span></h3>
-            </div>
-            <div class="post__headerDescription">
-              <p>
-                Oh sorry, yes, Roadster will have thrusters, not Plaid. Plaid is
-                indeed close to the theoretical maximum of a roadworthy car
-                without special devices.
-              </p>
-            </div>
-          </div>
-          <div class="post__footer">
-            <span class="material-icons"> repeat </span>
-            <span class="material-icons"> favorite_border </span>
-          </div>
-        </div>
-        <div id="dynamicTweet"></div>
-      </div>
+      <div id="dynamicTweet"></div>
       <!-- post ends -->
     </div>
 
@@ -116,7 +93,8 @@
     <div class="trending">
       <div class="trend_search">
         <i class="material-icons trend_search_icon" style="font-size: 28px">search</i>
-        <div class="trend_search_font">Search Twitter</div>
+        <input type="text" id="serach" placeholder="Search">
+        <div class="trend_search_font"></div>
       </div>
 
       <div class="trend_main">
